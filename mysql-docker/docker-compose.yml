@@ -1,0 +1,16 @@
+# create a lastest version mysql server container
+
+# docker-compose up -d
+
+version: "3.8"
+
+services:
+  db:
+    image: mysql
+    container_name: mysql_trybe
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "Mrfrogus226!"
+    ports:
+      - "3306:3306"
