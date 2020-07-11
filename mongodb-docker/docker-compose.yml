@@ -1,0 +1,19 @@
+# create a mongodb container with data persistence
+
+# docker-compose up -d
+
+version: "3.8"
+
+services:
+  db:
+  env_file: .env
+  image: "mongo"
+  container_name: mongodb_trybe
+  enviroment:
+    - MONGO_INITDB_ROOT_USERNAME=root
+    - MONGO_INITDB_ROOT_PASSWORD=${MY_PASSWORD}
+  volumes:
+  - ${INIT_MONGO_PATH}:/docker-entrypoint-initdb.d/init-mongo.js:ro
+  - /home/hfreitas/Documents/projects/docker/volumes/mongodb:/data/db
+  ports:
+  - "27017-27019:27017-27019"

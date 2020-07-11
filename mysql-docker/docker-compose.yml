@@ -1,4 +1,4 @@
-# create a lastest version mysql server container
+# create a latest version mysql server container with data persistence
 
 # docker-compose up -d
 
