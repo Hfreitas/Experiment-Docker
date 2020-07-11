@@ -16,4 +16,4 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - /home/hfreitas/Documents/projects/docker/volumes/mysql
+      - /home/hfreitas/Documents/projects/docker/volumes/mysql:/var/lib/mysql
